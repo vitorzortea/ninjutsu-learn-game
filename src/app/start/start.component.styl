@@ -1,0 +1,53 @@
+section
+  display: flex
+  align-items: flex-end
+  justify-content: center
+  min-height: 100vh
+  max-width: 100%
+  min-width: 100%
+  width: 100%
+  background-image: url('/assets/img/back.jpg')
+  background-position: center
+  background-size: cover
+
+  &>img
+    height: 100vh
+    margin-left: 30px
+
+  &>main
+    display: flex
+    min-height: 100vh
+    align-items: center
+
+    img
+      width: 400px
+      display: table
+      margin: 0 auto 50px
+
+    p
+      padding: 15px
+      background: rgba(0,0,0,0.5)
+      border-radius: 10px
+      color: white
+      font-size: 18px
+      max-width: 500px
+      margin: 0 auto 30px
+      text-align: center
+
+    a
+      display: table
+      margin: 0 auto
+      color: white
+      text-shadow: -2px -2px 0 #7A4F05, 2px -2px 0 #7A4F05, -2px  2px 0 #7A4F05, 2px  2px 0 #7A4F05
+      text-transform: uppercase
+      font-size: 22px
+      background-image: linear-gradient(to top, #FF2609, #FFDC00)
+      border: solid 3px #7A4F05
+      border-radius: 20px
+      padding: 10px 30px
+      font-weight: bold
+      transition: .5s
+
+      &:hover
+        cursor pointer
+        transform: scale(1.1)
