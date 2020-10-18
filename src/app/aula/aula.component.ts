@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MotorService } from '../service/motor.service';
 
 @Component({
   selector: 'app-aula',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AulaComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public motor: MotorService
+  ) { }
 
   ngOnInit() {
   }

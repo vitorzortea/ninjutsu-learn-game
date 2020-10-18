@@ -10,17 +10,10 @@ export class MotorService {
   grade = [
     {
       aula: 'Bunshin no Jutsu',
-      video: 0,
-      maos: [7, 5, 2],
-      equilibrio: 180,
-      chakara: 30
-    },
-    {
-      aula: 'Técnica de Transformação',
       traducao: 'Jutsu de Clonagem',
       descricao: 'Cria uma cópia intangível de seu próprio corpo',
       video: 0,
-      maos: [10, 11, 7],
+      maos: [7, 5, 2],
       equilibrio: 180,
       chakara: 30
     },
