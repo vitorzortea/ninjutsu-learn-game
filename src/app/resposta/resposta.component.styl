@@ -1,0 +1,122 @@
+section
+  min-height: 100vh
+  max-width: 100%
+  min-width: 100%
+  width: 100%
+  background-image: url('/assets/img/back.jpg')
+  background-position: center
+  background-size: cover
+  color: white
+  display: flex
+
+  main
+    padding: 10px
+    background: rgba(0,0,0,0.5)
+    border-radius: 5px
+    max-width: 75%
+    margin-right: 20px
+    text-align: center
+
+    h1
+      font-size: 32px
+      margin-bottom: 30px
+
+    p
+      font-size: 18px
+
+    &>div
+      display: flex
+
+      #selos>div
+        display: flex
+        flex-wrap: wrap
+        max-width: 400px
+
+        &>label
+          padding: 2.5px
+          width: 33.333%
+          position relative
+          line-height: 0
+          overflow: hidden
+          border-radius: 15px
+
+          img
+            padding: 2.5px
+            background: radial-gradient(white, transparent);
+            border: solid 4px #FFBA00
+
+          span
+            display: table
+            position: absolute
+            background: rgba(27,40,59,0.8)
+            top: 5px
+            left: 5px
+            height: calc(100% - 10px)
+            width: calc(100% - 10px)
+            display: flex
+            align-items: center
+            justify-content: center
+            font-size: 40px
+            text-shadow: 3px 3px #1B283B
+            font-weight: bold
+            display: none
+
+          input
+            display: none
+
+            &:checked+span
+              display: flex
+
+      #espirito-corpo
+        max-width: 200px
+        margin: 0 50px 60px
+
+        input
+          width: 100%
+          margin-top: 20px
+
+      #chakara
+        max-width: 200px
+        margin: 0 50px
+
+        &>div
+          position relative
+
+          input
+            width: 100%
+            border: 5px #FFBA00
+            position relative
+            z-index: 2
+
+          img
+            position: absolute
+            width: 50px
+            bottom: 0
+
+            &:first-child
+              left -25px
+
+            &:last-child
+              right -25px
+              transform: scaleX(-1)
+
+  &>div
+    min-height: 100vh
+    position relative
+    flex: auto
+    text-align: right
+    display: flex
+    align-items: flex-end
+
+    h1
+      max-width: 200px
+      position: absolute
+      top: 10px
+      right 10px
+
+    img
+      display: table
+      margin: 0 auto
+      max-height: 90vh
+
+

@@ -1,1 +1,36 @@
-<p>resposta works!</p>
+<section>
+  <main>
+    <h1>{{motor.grade[motor.atual].aula}}</h1>
+    <div>
+      <div id="selos">
+        <p>Selo de mãos</p>
+        <div>
+          <label *ngFor="let selo of selos; let i=index">
+            <img src="/assets/img/maos/{{selo.img}}" alt="Selo {{selo.name}}">
+            <input type="checkbox" name="rato" value="0" id="selo-{{selo.name}}" (change)="selectSelo('#selo-'+selo.name, i)" />
+            <span>{{selo.slect}}</span>
+          </label>
+        </div>
+      </div>
+      <div>
+        <div id="espirito-corpo">
+          <p>Corpo e espirito</p>
+          <img src="/assets/img/corpo-espirito.png" alt="Copo e Espirito">
+          <input type="range" max="360" min="0" value="0" />
+        </div>
+        <div id="chakara">
+          <p>Chakara acumulado</p>
+          <div>
+            <img src="/assets/img/fire.png" alt="Fire" />
+            <input type="range" max="100" min="0" value="0" />
+            <img src="/assets/img/fire.png" alt="Fire" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div>
+    <h1><img src="/assets/img/logo.png" alt="Ninjutsu Learn" /></h1>
+    <img src="/assets/img/normal.png" alt="genin" />
+  </div>
+</section>
