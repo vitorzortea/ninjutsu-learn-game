@@ -11,16 +11,17 @@
     </header>
     <div id="video">
       <div id="titles-video">
-        <p>1</p>
-        <p>2</p>
         <p>3</p>
+        <p>2</p>
+        <p>1</p>
         <p>Learn!</p>
       </div>
-      <video id="video-aula" src="/assets/video/aula1.mp4"></video>
+      <video id="video-aula" src="/assets/video/aula{{motor.grade[motor.atual].video}}.mp4"></video>
       <div id="painel">
-        <img src="/assets/img/marca-video.png" alt="Painel de controle" id="marca-controle" />
+        <img ng-style="" src="/assets/img/marca-video.png" alt="Painel de controle" id="marca-controle" />
         <img src="/assets/img/corpo-espirito.png" alt="Circulo de espirito" id="corpo-espirito" />
         <span></span>
+        <div id="animation-aula"></div>
       </div>
     </div>
   </div>
