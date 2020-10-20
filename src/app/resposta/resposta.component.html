@@ -16,6 +16,7 @@
         <div id="espirito-corpo">
           <p>Corpo e espirito</p>
           <img src="/assets/img/corpo-espirito.png" alt="Copo e Espirito">
+          <p id="legenda-equilibrio">{{resposta.controls.rotateEquilibrio.value}}</p>
           <input
             min="0"
             value="0"
@@ -32,6 +33,7 @@
             <input (change)="saveChakara()" formControlName="slide" type="range" max="100" min="0" value="0" />
             <img src="/assets/img/fire.png" alt="Fire" />
           </div>
+          <p id="legenda-chakara">{{resposta.controls.slide.value}}</p>
         </div>
       </div>
     </div>

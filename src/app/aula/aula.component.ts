@@ -9,6 +9,8 @@ import { MotorService } from '../service/motor.service';
 })
 export class AulaComponent implements OnInit {
 
+  chakara = 0;
+  equilibrio = 0;
   constructor(
     public motor: MotorService,
     public router: Router
@@ -23,6 +25,16 @@ export class AulaComponent implements OnInit {
     videoAula.muted = true;
     videoAula.play();
     this.setAnimationCSS();
+    setInterval(() => {
+      if (this.chakara !== this.motor.grade[this.motor.atual].chakara) {
+        this.chakara++;
+      }
+    }, (this.motor.grade[this.motor.atual].chakara) / 1000);
+    setInterval(() => {
+      if (this.equilibrio !== this.motor.grade[this.motor.atual].equilibrio) {
+        this.equilibrio++;
+      }
+    }, (this.motor.grade[this.motor.atual].equilibrio) / 1000);
     setTimeout(() => { this.router.navigate(['/resposta']); }, 5000);
   }
 
