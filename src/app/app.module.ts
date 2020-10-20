@@ -6,17 +6,20 @@ import { AppComponent } from './app.component';
 import { StartComponent } from './start/start.component';
 import { AulaComponent } from './aula/aula.component';
 import { RespostaComponent } from './resposta/resposta.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     StartComponent,
     AulaComponent,
-    RespostaComponent
+    RespostaComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

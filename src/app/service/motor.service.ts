@@ -46,4 +46,5 @@ export class MotorService {
     },
   ];
   atual = 0;
+  chaveResposta = 0;
 }

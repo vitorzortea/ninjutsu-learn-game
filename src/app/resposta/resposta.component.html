@@ -1,5 +1,5 @@
 <section>
-  <main>
+  <main [formGroup]="resposta">
     <h1>{{motor.grade[motor.atual].aula}}</h1>
     <div>
       <div id="selos">
@@ -16,13 +16,20 @@
         <div id="espirito-corpo">
           <p>Corpo e espirito</p>
           <img src="/assets/img/corpo-espirito.png" alt="Copo e Espirito">
-          <input type="range" max="360" min="0" value="0" />
+          <input
+            min="0"
+            value="0"
+            max="360"
+            type="range"
+            formControlName="rotateEquilibrio"
+            (mousemove)="changeRotate()"
+          />
         </div>
         <div id="chakara">
           <p>Chakara acumulado</p>
           <div>
             <img src="/assets/img/fire.png" alt="Fire" />
-            <input type="range" max="100" min="0" value="0" />
+            <input (change)="saveChakara()" formControlName="slide" type="range" max="100" min="0" value="0" />
             <img src="/assets/img/fire.png" alt="Fire" />
           </div>
         </div>
@@ -32,5 +39,6 @@
   <div>
     <h1><img src="/assets/img/logo.png" alt="Ninjutsu Learn" /></h1>
     <img src="/assets/img/normal.png" alt="genin" />
+    <button (click)="responder()">Executar o Jutsu</button>
   </div>
 </section>
