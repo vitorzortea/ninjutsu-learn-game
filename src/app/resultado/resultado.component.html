@@ -1,0 +1,28 @@
+<section>
+  <main>
+    <h1 *ngIf="motor.chaveResposta === 1"><img src="/assets/img/icon-green.png" alt="Ícone Sucesso" />Sucesso!</h1>
+    <h1 *ngIf="motor.chaveResposta !== 1"><img src="/assets/img/icon-red.png" alt="Ícone Fracasso" />Fracasso!</h1>
+    <div id="selos">
+      <div *ngFor="let selo of motor.resposta.maos">
+        <img src="/assets/img/maos/{{selo + 1}}.png" alt="Selo {{selo + 1}}" />
+      </div>
+    </div>
+    <div id="painel">
+      <img src="/assets/img/marca-video.png" alt="Painel de controle" id="marca-controle" />
+      <img
+        src="/assets/img/corpo-espirito.png"
+        alt="Circulo de espirito"
+        id="corpo-espirito"
+        [ngStyle]="{'transform': 'rotate(' + motor.resposta.equilibrio + 'deg)'}"
+      />
+      <span [ngStyle]="{'left': (((motor.resposta.chakara / 100) * 66) + 24) + '%'}"></span>
+    </div>
+  </main>
+  <div>
+    <h1><img src="/assets/img/logo.png" alt="Ninjutsu Learn" /></h1>
+    <img *ngIf="motor.chaveResposta === 1" src="/assets/img/happy.png" alt="genin" />
+    <img *ngIf="motor.chaveResposta !== 1" src="/assets/img/fail.png" alt="genin" />
+    <button *ngIf="motor.chaveResposta === 1" (click)="avancar()">Próxima Aula</button>
+    <button *ngIf="motor.chaveResposta !== 1" (click)="repetir()">Repetir Aula</button>
+  </div>
+</section>

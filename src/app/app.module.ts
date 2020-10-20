@@ -7,6 +7,7 @@ import { StartComponent } from './start/start.component';
 import { AulaComponent } from './aula/aula.component';
 import { RespostaComponent } from './resposta/resposta.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ResultadoComponent } from './resultado/resultado.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     StartComponent,
     AulaComponent,
     RespostaComponent,
+    ResultadoComponent,
   ],
   imports: [
     BrowserModule,

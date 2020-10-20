@@ -47,4 +47,9 @@ export class MotorService {
   ];
   atual = 0;
   chaveResposta = 0;
+  resposta = {
+    maos: [],
+    equilibrio: 0,
+    chakara: 0
+  };
 }

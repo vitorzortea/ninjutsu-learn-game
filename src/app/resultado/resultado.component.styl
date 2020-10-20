@@ -1,0 +1,106 @@
+section
+  min-height: 100vh
+  max-width: 100%
+  min-width: 100%
+  width: 100%
+  background-image: url('/assets/img/back.jpg')
+  background-position: center
+  background-size: cover
+  color: white
+  display: flex
+
+
+  main
+    padding: 10px
+    background: rgba(0,0,0,0.5)
+    border-radius: 5px
+    max-width: 75%
+    margin-right: 20px
+    text-align: center
+
+
+    h1
+      font-size: 46px
+      margin-bottom: 30px
+      text-shadow: 3px 3px 2px black
+      img
+        display: table
+        margin: 0 auto -50px
+        max-width: 150px
+
+    #selos
+      display: flex
+      max-width: 500px
+      margin: 0 auto
+      &>div
+        padding: 2.5px
+        flex: auto
+        border-radius: 10px
+      img
+        padding: 2.5px
+        background: radial-gradient(white, transparent);
+        border: solid 4px #FFBA00
+
+    #painel
+      position: relative
+      width: 100%
+      max-width: 600px
+      margin: 20px
+      overflow: hidden
+
+      #corpo-espirito
+        position: absolute;
+        top: 3.5%;
+        left: 5.85%;
+        height: 90%;
+
+      span
+        position: absolute
+        bottom: 18%
+        left: 24%
+        display: table
+        width: 3%
+        height: 32%
+        background-color: rgba(204, 81, 23, .8)
+        border: solid 4px white
+        border-radius 10px
+
+  &>div
+    min-height: 100vh
+    position relative
+    flex: auto
+    text-align: right
+    display: flex
+    align-items: flex-end
+
+    h1
+      max-width: 200px
+      position: absolute
+      top: 10px
+      right 10px
+
+    img
+      display: table
+      margin: 0 auto
+      max-height: 90vh
+
+    button
+      position: absolute
+      bottom: 20px
+      left: 50%
+      transform: translate(-50%, 0)
+      display: table
+      cursor pointer
+      color: white
+      text-shadow: -2px -2px 0 #7A4F05, 2px -2px 0 #7A4F05, -2px  2px 0 #7A4F05, 2px  2px 0 #7A4F05
+      text-transform: uppercase
+      font-size: 22px
+      background-image: linear-gradient(to top, #FF2609, #FFDC00)
+      border: solid 3px #7A4F05
+      border-radius: 20px
+      padding: 10px 30px
+      font-weight: bold
+      transition: .5s
+
+      &:hover
+        transform: translate(-50%, 0) scale(1.1)

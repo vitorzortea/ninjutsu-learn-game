@@ -1,6 +1,7 @@
 import { query } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { MotorService } from '../service/motor.service';
 
 @Component({
@@ -94,6 +95,7 @@ export class RespostaComponent implements OnInit {
 
   constructor(
     public fb: FormBuilder,
+    public router: Router,
     public motor: MotorService,
   ) { }
   ngOnInit() {
@@ -144,6 +146,10 @@ export class RespostaComponent implements OnInit {
         }
       }
     }
+    console.log(cer);
+    console.log(res);
+    this.motor.resposta = this.respostaFinal;
+    this.router.navigate(['/res']);
   }
 
 
